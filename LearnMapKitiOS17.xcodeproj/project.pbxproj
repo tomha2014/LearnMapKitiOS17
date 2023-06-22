@@ -14,6 +14,7 @@
 		0229A7682A40B7D2001934A8 /* LearnMapKitiOS17Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7672A40B7D2001934A8 /* LearnMapKitiOS17Tests.swift */; };
 		0229A7722A40B7D2001934A8 /* LearnMapKitiOS17UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7712A40B7D2001934A8 /* LearnMapKitiOS17UITests.swift */; };
 		0229A7742A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7732A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift */; };
+		0229A7822A40D905001934A8 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7812A40D905001934A8 /* CLLocationCoordinate2D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0229A76D2A40B7D2001934A8 /* LearnMapKitiOS17UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnMapKitiOS17UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0229A7712A40B7D2001934A8 /* LearnMapKitiOS17UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMapKitiOS17UITests.swift; sourceTree = "<group>"; };
 		0229A7732A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMapKitiOS17UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0229A7812A40D905001934A8 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		0229A7552A40B7D1001934A8 /* LearnMapKitiOS17 */ = {
 			isa = PBXGroup;
 			children = (
+				0229A7802A40D8E6001934A8 /* Extensions */,
 				0229A7562A40B7D1001934A8 /* LearnMapKitiOS17App.swift */,
 				0229A7582A40B7D1001934A8 /* ContentView.swift */,
 				0229A75A2A40B7D2001934A8 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				0229A7732A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift */,
 			);
 			path = LearnMapKitiOS17UITests;
+			sourceTree = "<group>";
+		};
+		0229A7802A40D8E6001934A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0229A7812A40D905001934A8 /* CLLocationCoordinate2D.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			files = (
 				0229A7592A40B7D1001934A8 /* ContentView.swift in Sources */,
 				0229A7572A40B7D1001934A8 /* LearnMapKitiOS17App.swift in Sources */,
+				0229A7822A40D905001934A8 /* CLLocationCoordinate2D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
