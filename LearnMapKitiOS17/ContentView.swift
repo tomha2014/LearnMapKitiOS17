@@ -32,16 +32,19 @@ struct ContentView: View {
                     )
                     {
                         if let pl = pinLocation {
-                            Marker("here", coordinate: pl)
+                            Marker("(\(pl.latitude), \(pl.longitude))", coordinate: pl)
                         }
+                                   
                     }
                     .onTapGesture(perform: { screenCoord in
+                        
 //                        if (placeAPin){
                             print(screenCoord)
                             // Need to convert screenCoord to MapCoord
                             // Need to get the location coord from map
                             pinLocation = .denver
 //                        }
+                        
                         placeAPin = false
                     })
                     
