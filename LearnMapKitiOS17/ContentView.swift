@@ -21,39 +21,34 @@ struct ContentView: View {
             pitch: 70
         )
     )
-        
+    
     var body: some View {
         GeometryReader { proxy in
             NavigationView {
                 VStack{
-                    Map(
-                        position: $cameraProsition,
-                        interactionModes: .all
-                    )
-                    {
-                        if let pl = pinLocation {
-                            Marker("(\(pl.latitude), \(pl.longitude))", coordinate: pl)
+                    MapReader{ reader in
+                        Map(
+                            position: $cameraProsition,
+                            interactionModes: .all
+                        )
+                        {
+                            if let pl = pinLocation {
+                                Marker("(\(pl.latitude), \(pl.longitude))", coordinate: pl)
+                            }
                         }
-                                   
-                    }
-                    .onTapGesture(perform: { screenCoord in
+                        .onTapGesture(perform: { screenCoord in
+                            pinLocation = reader.convert(screenCoord, from: .local)
+                            placeAPin = false
+                        })
                         
-//                        if (placeAPin){
-                            print(screenCoord)
-                            // Need to convert screenCoord to MapCoord
-                            // Need to get the location coord from map
-                            pinLocation = .denver
-//                        }
+                        .mapControls{
+                            MapCompass()
+                            MapScaleView()
+                            MapPitchToggle()
+                        }
                         
-                        placeAPin = false
-                    })
-                    
-                    .mapControls{
-                        MapCompass()
-                        MapScaleView()
-                        MapPitchButton()
+                        .mapStyle(.standard(elevation: .automatic))
                     }
-                    .mapStyle(.standard(elevation: .automatic))
                     
                 }
                 .navigationTitle("Map View")
@@ -73,23 +68,3 @@ struct ContentView: View {
     ContentView()
 }
 
-//private extension ContentView {
-//
-//    func convertTap(at point: CGPoint, for mapSize: CGSize) -> CLLocationCoordinate2D {
-//
-//        let lat = cameraProsition.camera?.centerCoordinate.latitude
-//        let lon = cameraProsition.camera?.centerCoordinate.longitude
-//        let mapCenter = CGPoint(x: mapSize.width/2, y: mapSize.height/2)
-//
-//        // X
-//        let xValue = (point.x - mapCenter.x) / mapCenter.x
-//        let xSpan = xValue * region.span.longitudeDelta/2
-//
-//        // Y
-//        let yValue = (point.y - mapCenter.y) / mapCenter.y
-//        let ySpan = yValue * region.span.latitudeDelta/2
-//
-//        return CLLocationCoordinate2D(latitude: lat! - ySpan, longitude: lon! + xSpan)
-//
-//    }
-//}
