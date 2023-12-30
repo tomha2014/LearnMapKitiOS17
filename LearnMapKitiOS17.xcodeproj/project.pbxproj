@@ -15,6 +15,7 @@
 		0229A7722A40B7D2001934A8 /* LearnMapKitiOS17UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7712A40B7D2001934A8 /* LearnMapKitiOS17UITests.swift */; };
 		0229A7742A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7732A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift */; };
 		0229A7822A40D905001934A8 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7812A40D905001934A8 /* CLLocationCoordinate2D.swift */; };
+		027693C72ACE36FE00778ACA /* MapViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027693C62ACE36FE00778ACA /* MapViewWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		0229A7712A40B7D2001934A8 /* LearnMapKitiOS17UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMapKitiOS17UITests.swift; sourceTree = "<group>"; };
 		0229A7732A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMapKitiOS17UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0229A7812A40D905001934A8 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		027693C62ACE36FE00778ACA /* MapViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				0229A7662A40B7D2001934A8 /* LearnMapKitiOS17Tests */,
 				0229A7702A40B7D2001934A8 /* LearnMapKitiOS17UITests */,
 				0229A7542A40B7D1001934A8 /* Products */,
+				D83EF634E9AC8399C3B45EA3 /* xcschemes */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +104,7 @@
 				0229A7582A40B7D1001934A8 /* ContentView.swift */,
 				0229A75A2A40B7D2001934A8 /* Assets.xcassets */,
 				0229A75C2A40B7D2001934A8 /* Preview Content */,
+				027693C62ACE36FE00778ACA /* MapViewWrapper.swift */,
 			);
 			path = LearnMapKitiOS17;
 			sourceTree = "<group>";
@@ -136,6 +140,14 @@
 				0229A7812A40D905001934A8 /* CLLocationCoordinate2D.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D83EF634E9AC8399C3B45EA3 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = xcschemes;
+			path = LearnMapKitiOS17.xcodeproj/project.xcworkspace/xcuserdata/tomhackbarth.xcuserdatad/xcschemes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0229A7592A40B7D1001934A8 /* ContentView.swift in Sources */,
+				027693C72ACE36FE00778ACA /* MapViewWrapper.swift in Sources */,
 				0229A7572A40B7D1001934A8 /* LearnMapKitiOS17App.swift in Sources */,
 				0229A7822A40D905001934A8 /* CLLocationCoordinate2D.swift in Sources */,
 			);
