@@ -34,18 +34,29 @@ struct MapViewWrapper: View {
     @State private var isMarkerDragging = false
     @State private var markerData: MarkerData?
     
+    @State private var markers: [MarkerData] = []
+    
     var body: some View {
         VStack(){
-            Text(buildString(markerData: markerData))
+            
             GeometryReader { geometryProxy in
                 MapReader { mapProxy in
                     Map(position: $cameraPosition, interactionModes: modes) {
                         if let markerData {
                             Marker("Spot", coordinate: markerData.coordinate)
                         }
+// This does not work.
+// error: Type '()' cannot conform to 'MapContent'
+                        markers.forEach { marker in
+                            print(marker.coordinate)
+                        }
                     }
                     .onTapGesture { screenCoordinate in
                         self.markerData = mapProxy.markerData(screenCoordinate: screenCoordinate, geometryProxy: geometryProxy)
+                        
+                        if let markerData = self.markerData{
+                            markers.append(markerData)
+                        }
                     }
                     .highPriorityGesture(DragGesture(minimumDistance: 1)
                         .onChanged { drag in
