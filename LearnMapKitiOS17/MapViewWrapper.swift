@@ -52,17 +52,19 @@ struct MapViewWrapper: View {
                         }
                         .onTapGesture { screenCoordinate in
                             self.markerData = mapProxy.markerData(screenCoordinate: screenCoordinate, geometryProxy: geometryProxy)
+                            if let md = self.markerData{
+                                viewModel.addMarkerData(marker: md)
+                            }
                         }
                         .highPriorityGesture(DragGesture(minimumDistance: 1)
                             .onChanged { drag in
-
                                 if (markerData == nil) {
-                                    for (index, pt) in viewModel.points.enumerated() {
-                                        let m = mapProxy.markerData(coordinate: pt, geometryProxy: geometryProxy)
+                                    for (index, pt) in viewModel.touchPoints.enumerated() {
+                                        let m = mapProxy.markerData(coordinate: pt.point, geometryProxy: geometryProxy)
                                         if (m!.touchableRect.contains(drag.startLocation)){
                                             self.markerData = m
                                             viewModel.selectPointIndex = index
-                                            viewModel.markerText = "point \(index)"
+                                            viewModel.markerText = "Dragging"
                                         }
                                     }
                                 }
@@ -78,6 +80,7 @@ struct MapViewWrapper: View {
                                 }
 
                                 self.markerData = mapProxy.markerData(screenCoordinate: drag.location, geometryProxy: geometryProxy)
+ 
                             }
                             .onEnded { drag in
                                 setMapInteraction(enabled: true)

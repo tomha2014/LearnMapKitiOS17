@@ -153,11 +153,39 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D83EF16D4FD8B5D15DA7F150 /* 9a */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 9a;
+			sourceTree = "<group>";
+		};
+		D83EF1F874100A95CC0E23E5 /* 25 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 25;
+			sourceTree = "<group>";
+		};
+		D83EF21EF2BD565B5A27785D /* 4e */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 4e;
+			sourceTree = "<group>";
+		};
 		D83EF2D99C04E265578F7481 /* 1b */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = 1b;
+			sourceTree = "<group>";
+		};
+		D83EF36388F29AE5D90461C3 /* 29 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 29;
 			sourceTree = "<group>";
 		};
 		D83EF3AB2BE78BDBDE25BC85 /* f0 */ = {
@@ -168,11 +196,42 @@
 			path = objects/f0;
 			sourceTree = "<group>";
 		};
+		D83EF4D6E24EB209B65C3AFD /* 3f */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3f;
+			sourceTree = "<group>";
+		};
+		D83EF50463C4906C76EA787C /* 32 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 32;
+			sourceTree = "<group>";
+		};
+		D83EF538B32B569256AEC10B /* 10 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 10;
+			sourceTree = "<group>";
+		};
+		D83EF5632DFD448D5058199B /* 8b */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 8b;
+			sourceTree = "<group>";
+		};
 		D83EF5DD47E6E62143F1F4D1 /* .git */ = {
 			isa = PBXGroup;
 			children = (
 				D83EF3AB2BE78BDBDE25BC85 /* f0 */,
 				D83EF5EF653A461DB2ACBF18 /* objects */,
+				D83EFCFC6D1AD8CF02946A4E /* heads */,
+				D83EFA89BCDDF2F54EE0EFC0 /* refs */,
+				D83EF807986011F71C73038C /* logs */,
 			);
 			path = .git;
 			sourceTree = "<group>";
@@ -183,8 +242,31 @@
 				D83EFFEDA9079A72A4BBFB91 /* f6 */,
 				D83EF683A6EDB80DD3F94532 /* e2 */,
 				D83EF2D99C04E265578F7481 /* 1b */,
+				D83EF60456335961918DE33F /* aa */,
+				D83EFAFE6F10A27EBB326A7B /* 85 */,
+				D83EFCA538F99210114E0097 /* d5 */,
+				D83EF21EF2BD565B5A27785D /* 4e */,
+				D83EF70B2C09CF3702FC6A08 /* 0d */,
+				D83EF5632DFD448D5058199B /* 8b */,
+				D83EF50463C4906C76EA787C /* 32 */,
+				D83EF16D4FD8B5D15DA7F150 /* 9a */,
+				D83EF36388F29AE5D90461C3 /* 29 */,
+				D83EF85BD4AA4454547EC757 /* a5 */,
+				D83EF4D6E24EB209B65C3AFD /* 3f */,
+				D83EF538B32B569256AEC10B /* 10 */,
+				D83EF67CC0EA1FF6F78BA0DB /* 8e */,
+				D83EF1F874100A95CC0E23E5 /* 25 */,
+				D83EFE78ECDAC4D764F70F6E /* 89 */,
+				D83EFD6D0946D948F7B0E012 /* 3b */,
 			);
 			path = objects;
+			sourceTree = "<group>";
+		};
+		D83EF60456335961918DE33F /* aa */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = aa;
 			sourceTree = "<group>";
 		};
 		D83EF634E9AC8399C3B45EA3 /* xcschemes */ = {
@@ -195,11 +277,39 @@
 			path = LearnMapKitiOS17.xcodeproj/project.xcworkspace/xcuserdata/tomhackbarth.xcuserdatad/xcschemes;
 			sourceTree = "<group>";
 		};
+		D83EF67CC0EA1FF6F78BA0DB /* 8e */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 8e;
+			sourceTree = "<group>";
+		};
 		D83EF683A6EDB80DD3F94532 /* e2 */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = e2;
+			sourceTree = "<group>";
+		};
+		D83EF70B2C09CF3702FC6A08 /* 0d */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 0d;
+			sourceTree = "<group>";
+		};
+		D83EF807986011F71C73038C /* logs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = logs;
+			sourceTree = "<group>";
+		};
+		D83EF85BD4AA4454547EC757 /* a5 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = a5;
 			sourceTree = "<group>";
 		};
 		D83EF8E6CFDB4CF6D54CAC10 /* AppIcon.appiconset */ = {
@@ -208,6 +318,50 @@
 			);
 			name = AppIcon.appiconset;
 			path = Assets.xcassets/AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+		D83EFA89BCDDF2F54EE0EFC0 /* refs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = refs;
+			path = logs/refs;
+			sourceTree = "<group>";
+		};
+		D83EFAFE6F10A27EBB326A7B /* 85 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 85;
+			sourceTree = "<group>";
+		};
+		D83EFCA538F99210114E0097 /* d5 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = d5;
+			sourceTree = "<group>";
+		};
+		D83EFCFC6D1AD8CF02946A4E /* heads */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = heads;
+			path = logs/refs/heads;
+			sourceTree = "<group>";
+		};
+		D83EFD6D0946D948F7B0E012 /* 3b */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3b;
+			sourceTree = "<group>";
+		};
+		D83EFE78ECDAC4D764F70F6E /* 89 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 89;
 			sourceTree = "<group>";
 		};
 		D83EFFEDA9079A72A4BBFB91 /* f6 */ = {
