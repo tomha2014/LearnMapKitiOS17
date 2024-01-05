@@ -16,6 +16,9 @@
 		0229A7742A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7732A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift */; };
 		0229A7822A40D905001934A8 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A7812A40D905001934A8 /* CLLocationCoordinate2D.swift */; };
 		027693C72ACE36FE00778ACA /* MapViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027693C62ACE36FE00778ACA /* MapViewWrapper.swift */; };
+		02C10B432B4731B900C6BD23 /* MapViewWrapper-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C10B422B4731B900C6BD23 /* MapViewWrapper-ViewModel.swift */; };
+		02C10B452B4733FA00C6BD23 /* MarkerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C10B442B4733FA00C6BD23 /* MarkerData.swift */; };
+		02C10B472B4839EA00C6BD23 /* TouchPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C10B462B4839EA00C6BD23 /* TouchPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		0229A7732A40B7D2001934A8 /* LearnMapKitiOS17UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMapKitiOS17UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0229A7812A40D905001934A8 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		027693C62ACE36FE00778ACA /* MapViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWrapper.swift; sourceTree = "<group>"; };
+		02C10B422B4731B900C6BD23 /* MapViewWrapper-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewWrapper-ViewModel.swift"; sourceTree = "<group>"; };
+		02C10B442B4733FA00C6BD23 /* MarkerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerData.swift; sourceTree = "<group>"; };
+		02C10B462B4839EA00C6BD23 /* TouchPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 				0229A7702A40B7D2001934A8 /* LearnMapKitiOS17UITests */,
 				0229A7542A40B7D1001934A8 /* Products */,
 				D83EF634E9AC8399C3B45EA3 /* xcschemes */,
+				D83EF5DD47E6E62143F1F4D1 /* .git */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +112,10 @@
 				0229A75A2A40B7D2001934A8 /* Assets.xcassets */,
 				0229A75C2A40B7D2001934A8 /* Preview Content */,
 				027693C62ACE36FE00778ACA /* MapViewWrapper.swift */,
+				D83EF8E6CFDB4CF6D54CAC10 /* AppIcon.appiconset */,
+				02C10B422B4731B900C6BD23 /* MapViewWrapper-ViewModel.swift */,
+				02C10B442B4733FA00C6BD23 /* MarkerData.swift */,
+				02C10B462B4839EA00C6BD23 /* TouchPoint.swift */,
 			);
 			path = LearnMapKitiOS17;
 			sourceTree = "<group>";
@@ -142,12 +153,68 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D83EF2D99C04E265578F7481 /* 1b */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 1b;
+			sourceTree = "<group>";
+		};
+		D83EF3AB2BE78BDBDE25BC85 /* f0 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = f0;
+			path = objects/f0;
+			sourceTree = "<group>";
+		};
+		D83EF5DD47E6E62143F1F4D1 /* .git */ = {
+			isa = PBXGroup;
+			children = (
+				D83EF3AB2BE78BDBDE25BC85 /* f0 */,
+				D83EF5EF653A461DB2ACBF18 /* objects */,
+			);
+			path = .git;
+			sourceTree = "<group>";
+		};
+		D83EF5EF653A461DB2ACBF18 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				D83EFFEDA9079A72A4BBFB91 /* f6 */,
+				D83EF683A6EDB80DD3F94532 /* e2 */,
+				D83EF2D99C04E265578F7481 /* 1b */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
 		D83EF634E9AC8399C3B45EA3 /* xcschemes */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = xcschemes;
 			path = LearnMapKitiOS17.xcodeproj/project.xcworkspace/xcuserdata/tomhackbarth.xcuserdatad/xcschemes;
+			sourceTree = "<group>";
+		};
+		D83EF683A6EDB80DD3F94532 /* e2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = e2;
+			sourceTree = "<group>";
+		};
+		D83EF8E6CFDB4CF6D54CAC10 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppIcon.appiconset;
+			path = Assets.xcassets/AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+		D83EFFEDA9079A72A4BBFB91 /* f6 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = f6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +348,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0229A7592A40B7D1001934A8 /* ContentView.swift in Sources */,
+				02C10B452B4733FA00C6BD23 /* MarkerData.swift in Sources */,
+				02C10B472B4839EA00C6BD23 /* TouchPoint.swift in Sources */,
+				02C10B432B4731B900C6BD23 /* MapViewWrapper-ViewModel.swift in Sources */,
 				027693C72ACE36FE00778ACA /* MapViewWrapper.swift in Sources */,
 				0229A7572A40B7D1001934A8 /* LearnMapKitiOS17App.swift in Sources */,
 				0229A7822A40D905001934A8 /* CLLocationCoordinate2D.swift in Sources */,

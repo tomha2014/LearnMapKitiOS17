@@ -4,23 +4,17 @@
 //
 //  Created by tom hackbarth on 10/4/23.
 //
+// My Question:
+// https://stackoverflow.com/questions/77754258/on-ios-with-mapkit-multible-how-do-display-markers
+
 
 import MapKit
 import SwiftUI
 
-private let rectWidth: Double = 80
-
-private struct MarkerData {
-    let coordinate: CLLocationCoordinate2D
-    let screenPoint: CGPoint
-    
-    var touchableRect: CGRect {
-        .init(x: screenPoint.x - rectWidth / 2, y: screenPoint.y - rectWidth / 2, width: rectWidth, height: rectWidth)
-    }
-}
-
 struct MapViewWrapper: View {
     
+    @StateObject private var viewModel = ViewModel()
+
     @State private var cameraPosition: MapCameraPosition = .camera(
         MapCamera(
             centerCoordinate: .denver,
@@ -31,67 +25,85 @@ struct MapViewWrapper: View {
     )
     
     @State private var modes: MapInteractionModes = [.all]
-    @State private var isMarkerDragging = false
     @State private var markerData: MarkerData?
-    
     @State private var markers: [MarkerData] = []
-    
+
     var body: some View {
         VStack(){
-            
-            GeometryReader { geometryProxy in
-                MapReader { mapProxy in
-                    Map(position: $cameraPosition, interactionModes: modes) {
-                        if let markerData {
-                            Marker("Spot", coordinate: markerData.coordinate)
-                        }
-// This does not work.
-// error: Type '()' cannot conform to 'MapContent'
-                        markers.forEach { marker in
-                            print(marker.coordinate)
-                        }
-                    }
-                    .onTapGesture { screenCoordinate in
-                        self.markerData = mapProxy.markerData(screenCoordinate: screenCoordinate, geometryProxy: geometryProxy)
-                        
-                        if let markerData = self.markerData{
-                            markers.append(markerData)
-                        }
-                    }
-                    .highPriorityGesture(DragGesture(minimumDistance: 1)
-                        .onChanged { drag in
-                            guard let markerData else { return }
-                            if isMarkerDragging {
-                                
-                            } else if markerData.touchableRect.contains(drag.startLocation) {
-                                isMarkerDragging = true
-                                setMapInteraction(enabled: false)
-                            } else {
-                                return
+            VStack{
+                GeometryReader { geometryProxy in
+                    MapReader { mapProxy in
+                        Map(position: $cameraPosition, interactionModes: modes) {
+                            if let markerData {
+                                Marker(viewModel.markerText, coordinate: markerData.coordinate)
                             }
-                            
-                            self.markerData = mapProxy.markerData(screenCoordinate: drag.location, geometryProxy: geometryProxy)
+
+                            ForEach(viewModel.touchPoints) { marker in
+                                Marker(marker.title, coordinate: marker.point)
+                            }
+
+                            let points = viewModel.touchPoints.map { $0.point }
+
+                            MapPolyline(coordinates: points,
+                                        contourStyle: MapPolyline.ContourStyle.straight)
+                            .mapOverlayLevel(level: .aboveLabels)
+                            .stroke(.red, lineWidth: 4)
+                            .tint(.pink)
                         }
-                        .onEnded { drag in
-                            setMapInteraction(enabled: true)
-                            isMarkerDragging = false
+                        .onTapGesture { screenCoordinate in
+                            self.markerData = mapProxy.markerData(screenCoordinate: screenCoordinate, geometryProxy: geometryProxy)
                         }
-                    )
-                    .onMapCameraChange {
-                        guard let markerData else { return }
-                        self.markerData = mapProxy.markerData(coordinate: markerData.coordinate, geometryProxy: geometryProxy)
+                        .highPriorityGesture(DragGesture(minimumDistance: 1)
+                            .onChanged { drag in
+
+                                if (markerData == nil) {
+                                    for (index, pt) in viewModel.points.enumerated() {
+                                        let m = mapProxy.markerData(coordinate: pt, geometryProxy: geometryProxy)
+                                        if (m!.touchableRect.contains(drag.startLocation)){
+                                            self.markerData = m
+                                            viewModel.selectPointIndex = index
+                                            viewModel.markerText = "point \(index)"
+                                        }
+                                    }
+                                }
+                                guard let markerData else{ return }
+
+                                if viewModel.isMarkerDragging {
+
+                                } else if markerData.touchableRect.contains(drag.startLocation) {
+                                    viewModel.isMarkerDragging = true
+                                    setMapInteraction(enabled: false)
+                                } else {
+                                    return
+                                }
+
+                                self.markerData = mapProxy.markerData(screenCoordinate: drag.location, geometryProxy: geometryProxy)
+                            }
+                            .onEnded { drag in
+                                setMapInteraction(enabled: true)
+                                viewModel.isMarkerDragging = false
+                                if (viewModel.selectPointIndex > -1){
+                                    viewModel.updatePointByIndex(index: viewModel.selectPointIndex, coord: markerData!.coordinate)
+                                    viewModel.selectPointIndex = -1
+                                    self.markerData = nil
+                                }
+                            }
+                        )
+                        .onMapCameraChange {
+                            guard let markerData else { return }
+                            self.markerData = mapProxy.markerData(coordinate: markerData.coordinate, geometryProxy: geometryProxy)
+                        }
                     }
                 }
+            }
+            .onAppear(){
             }
         }
     }
 }
 
 private extension MapViewWrapper{
-    private func buildString(markerData: MarkerData?) -> String{
-        guard let cord = markerData else {return "--"}
-        return "\(cord.coordinate.latitude), \(cord.coordinate.longitude)"
-    }
+
     
     private func setMapInteraction(enabled: Bool) {
         if enabled {
