@@ -114,8 +114,8 @@
 				027693C62ACE36FE00778ACA /* MapViewWrapper.swift */,
 				D83EF8E6CFDB4CF6D54CAC10 /* AppIcon.appiconset */,
 				02C10B422B4731B900C6BD23 /* MapViewWrapper-ViewModel.swift */,
-				02C10B442B4733FA00C6BD23 /* MarkerData.swift */,
 				02C10B462B4839EA00C6BD23 /* TouchPoint.swift */,
+				02C10B442B4733FA00C6BD23 /* MarkerData.swift */,
 			);
 			path = LearnMapKitiOS17;
 			sourceTree = "<group>";
@@ -231,6 +231,13 @@
 			path = c5;
 			sourceTree = "<group>";
 		};
+		D83EF46157EF3B031185FBE1 /* 36 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 36;
+			sourceTree = "<group>";
+		};
 		D83EF4D6E24EB209B65C3AFD /* 3f */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +288,8 @@
 				D83EFCFC6D1AD8CF02946A4E /* heads */,
 				D83EFA89BCDDF2F54EE0EFC0 /* refs */,
 				D83EF807986011F71C73038C /* logs */,
+				D83EFB565011231417CE84A9 /* origin */,
+				D83EFD31369BA62C65EEA285 /* remotes */,
 			);
 			path = .git;
 			sourceTree = "<group>";
@@ -324,6 +333,10 @@
 				D83EF5240B6892E32F7A7B70 /* 16 */,
 				D83EF696D73332005F86E264 /* ed */,
 				D83EF84415045800C3B37549 /* 5e */,
+				D83EFDC856DCCD717D61A79F /* 64 */,
+				D83EF46157EF3B031185FBE1 /* 36 */,
+				D83EF777CA337C3963E14835 /* 71 */,
+				D83EF84527C6FE02A203C151 /* ce */,
 			);
 			path = objects;
 			sourceTree = "<group>";
@@ -378,6 +391,13 @@
 			path = 0d;
 			sourceTree = "<group>";
 		};
+		D83EF777CA337C3963E14835 /* 71 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 71;
+			sourceTree = "<group>";
+		};
 		D83EF807986011F71C73038C /* logs */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +410,13 @@
 			children = (
 			);
 			path = 5e;
+			sourceTree = "<group>";
+		};
+		D83EF84527C6FE02A203C151 /* ce */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ce;
 			sourceTree = "<group>";
 		};
 		D83EF85BD4AA4454547EC757 /* a5 */ = {
@@ -452,6 +479,14 @@
 			path = 6e;
 			sourceTree = "<group>";
 		};
+		D83EFB565011231417CE84A9 /* origin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = origin;
+			path = refs/remotes/origin;
+			sourceTree = "<group>";
+		};
 		D83EFB6E284BB4DDAA2A58A8 /* c4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +516,14 @@
 			path = logs/refs/heads;
 			sourceTree = "<group>";
 		};
+		D83EFD31369BA62C65EEA285 /* remotes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = remotes;
+			path = refs/remotes;
+			sourceTree = "<group>";
+		};
 		D83EFD6D0946D948F7B0E012 /* 3b */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +536,13 @@
 			children = (
 			);
 			path = 0f;
+			sourceTree = "<group>";
+		};
+		D83EFDC856DCCD717D61A79F /* 64 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 64;
 			sourceTree = "<group>";
 		};
 		D83EFE78ECDAC4D764F70F6E /* 89 */ = {
